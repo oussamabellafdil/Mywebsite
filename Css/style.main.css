@@ -1,0 +1,18 @@
+body {
+	background: #f8f9fa;
+
+}
+
+#clock {
+  font-family: 'Caveat', sans-serif;
+  color: #000;
+  font-size: 56px;
+  text-align: center;
+  padding-top: 60px;
+  padding-bottom: 40px;
+}
+h1{
+	font-family: 'PT Sans', sans-serif;
+	color: #000;
+	text-align: center;
+}
