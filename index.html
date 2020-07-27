@@ -4,7 +4,7 @@
 <head>
 
 	<title>&bull; Oussama Bellafdil</title>
-	
+
 	<link rel="stylesheet" href="Css/bootstrap/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="Css/style.main.css">
 
@@ -14,72 +14,57 @@
 </head>
 
 <body>
-	<div class="site-wrap">
-		<div class="site-mobile-menu">
-			<div class="site-mobile-menu-header">
-				<div class="site-mobile-menu-close mt-3">
-					<span class="icon-close2 js-menu-toggle"></span>
-				</div>
-			</div>
-			<div class="site-mobile-menu-body">
-				<ul class="site-nav-wrap">
-					<li class="active">
-						<a href="index.html">Home</a>
-					</li>
-					<li class="has-children"><span class="arrow-collapse collapsed" data-toggle="collapse"
-							data-target="#collapseItem0"></span>
-						<a href="#">Dropdown</a>
-						<ul class="collapse" id="collapseItem0">
-							<li><a href="#">Menu One</a></li>
-							<li><a href="#">Menu Two</a></li>
-							<li><a href="#">Menu Three</a></li>
-						</ul>
-					</li>
-					<li><a href="about.html">About</a></li>
-					<li><a href="contact.html">Contact</a></li>
-					<li><a href="login-register.html">Login / Register</a></li>
-				</ul>
-			</div>
-		</div>
-		<header class="site-navbar py-4" role="banner">
-			<div class="container">
-				<div class="row align-items-center">
-					<div class="col-3">
-						<h1 class="site-logo"><a href="index.html" class="h2">Podcast<span class="text-primary">.</span>
-							</a>
-						</h1>
-					</div>
-					<div class="col-9">
-						<nav class="site-navigation position-relative text-right text-md-right" role="navigation">
-							<div class="d-block d-lg-none ml-md-0 mr-auto"><a href="#"
-									class="site-menu-toggle js-menu-toggle text-black"><span
-										class="icon-menu h3"></span></a>
-							</div>
-							<ul class="site-menu js-clone-nav d-none d-lg-block">
-								<li class="active">
-									<a href="index.html">Home</a>
-								</li>
-								<li class="has-children">
-									<a href="#">Dropdown</a>
-									<ul class="dropdown arrow-top">
-										<li><a href="#">Menu One</a></li>
-										<li><a href="#">Menu Two</a></li>
-										<li><a href="#">Menu Three</a></li>
-									</ul>
-								</li>
-								<li><a href="about.html">About</a></li>
-								<li><a href="contact.html">Contact</a></li>
-								<li><a href="login-register.html">Login / Register</a></li>
-							</ul>
-						</nav>
-					</div>
-				</div>
-			</div>
-		</header>
+	<div class="menu-icon">
+		<span class="menu-icon__line menu-icon__line-left"></span>
+		<span class="menu-icon__line"></span>
+		<span class="menu-icon__line menu-icon__line-right"></span>
 	</div>
 
-	<script src="Js/javascript.js"></script>
+	<div class="nav">
+		<div class="nav__content">
+			<ul class="nav__list">
+				<li class="nav__list-item">Home</li>
+				<li class="nav__list-item">About</li>
+				<li class="nav__list-item">Contact</li>
+				<li class="nav__list-item">GitHub</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="site-content">
+		<h1 class="site-content__headline">Another menu concept</h1>
+	</div>
+	<script>
+		console.clear();
+
+			const app = (() => {
+				let body;
+				let menu;
+				let menuItems;
+
+				const init = () => {
+					body = document.querySelector("body");
+					menu = document.querySelector(".menu-icon");
+					menuItems = document.querySelectorAll(".nav__list-item");
+
+					applyListeners();
+				};
+
+				const applyListeners = () => {
+					menu.addEventListener("click", () => toggleClass(body, "nav-active"));
+				};
+
+				const toggleClass = (element, stringClass) => {
+					if (element.classList.contains(stringClass))
+						element.classList.remove(stringClass);
+					else element.classList.add(stringClass);
+				};
+
+				init();
+			})();
+
 	</script>
+	
 </body>
 
 </html>
