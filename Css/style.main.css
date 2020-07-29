@@ -1,8 +1,17 @@
 body {
-  background-color: #1e2023;
+  background-color: #fff;
+  color: #1e2023;
   font-family: 'Fira Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+a{
+  text-decoration: none;
+  color: #000;
+}
+a:hover{
+  text-decoration: none;
+  color: #000;
 }
 .site-content {
   max-width: 1100px;
@@ -15,7 +24,7 @@ body {
 }
 .site-content__headline {
   font-weight: 200;
-  color: #ffffff;
+  color: #1e2023;
   font-size: calc(2vw + 10px);
 }
 .menu-icon {
@@ -23,7 +32,7 @@ body {
   width: 30px;
   position: fixed;
   z-index: 2;
-  left: 50px;
+  right: 50px;
   top: 30px;
   cursor: pointer;
 }
@@ -31,7 +40,7 @@ body {
   height: 2px;
   width: 30px;
   display: block;
-  background-color: #ffffff;
+  background-color: #1e2023;
   margin-bottom: 4px;
   transition: transform 0.2s ease, background-color 0.5s ease;
 }
@@ -57,7 +66,7 @@ body {
   transform: translateX(0%) translateY(-100%);
 }
 .nav:after {
-  background: white;
+  background: #1e2023;
   transition-delay: 0s;
 }
 .nav:before {
@@ -81,11 +90,12 @@ body {
   transform: translate(0%, 100%);
   transition: opacity 0.2s ease, transform 0.3s ease;
   margin-right: 25px;
+  color: #fff;
 }
 .nav__list-item:before {
   content: "";
   position: absolute;
-  background: #000000;
+  background: #fff;
   width: 20px;
   height: 1px;
   top: 100%;
@@ -97,7 +107,7 @@ body {
   width: 100%;
 }
 body.nav-active .menu-icon__line {
-  background-color: #000;
+  background-color: #fff;
   transform: translateX(0px) rotate(-45deg);
 }
 body.nav-active .menu-icon__line-left {

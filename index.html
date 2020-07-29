@@ -32,39 +32,50 @@
 	</div>
 
 	<div class="site-content">
-		<h1 class="site-content__headline">Another menu concept</h1>
+		<div class="jumbotron">
+			<h1 class="display-4">Hello, world!</h1>
+			<p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to
+				featured content or information.</p>
+			<hr class="my-4">
+			<p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+			<a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+		</div>
 	</div>
+
+
+	<script src="Js/jquery-3.3.1.min.js"></script>
+	<script src="Js/bootstrap.min.js"></script>
 	<script>
 		console.clear();
 
-			const app = (() => {
-				let body;
-				let menu;
-				let menuItems;
+		const app = (() => {
+			let body;
+			let menu;
+			let menuItems;
 
-				const init = () => {
-					body = document.querySelector("body");
-					menu = document.querySelector(".menu-icon");
-					menuItems = document.querySelectorAll(".nav__list-item");
+			const init = () => {
+				body = document.querySelector("body");
+				menu = document.querySelector(".menu-icon");
+				menuItems = document.querySelectorAll(".nav__list-item");
 
-					applyListeners();
-				};
+				applyListeners();
+			};
 
-				const applyListeners = () => {
-					menu.addEventListener("click", () => toggleClass(body, "nav-active"));
-				};
+			const applyListeners = () => {
+				menu.addEventListener("click", () => toggleClass(body, "nav-active"));
+			};
 
-				const toggleClass = (element, stringClass) => {
-					if (element.classList.contains(stringClass))
-						element.classList.remove(stringClass);
-					else element.classList.add(stringClass);
-				};
+			const toggleClass = (element, stringClass) => {
+				if (element.classList.contains(stringClass))
+					element.classList.remove(stringClass);
+				else element.classList.add(stringClass);
+			};
 
-				init();
-			})();
+			init();
+		})();
 
 	</script>
-	
+
 </body>
 
 </html>
